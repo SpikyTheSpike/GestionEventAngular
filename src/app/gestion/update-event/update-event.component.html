@@ -1,0 +1,33 @@
+<div class="login flex justify-center items-center h-screen flex-col ">
+    
+    <form [formGroup]="registerForm"  (ngSubmit)="register()" class="form">
+            <div class="flex justify-start items-center w-full ">
+                <a routerLink="/gestion/myevents"><button class="btn-event m-2 ">retour</button></a>
+            </div>
+
+            <h3 class="w-full flex justify-center text-xl font-bold m-4">Modifier votre event</h3>
+
+            <div class="mb-4 w-4/5 px-5">
+                <input type="text" placeholder="Titre" formControlName="name" class="w-full placeholder: p-1">
+            </div>
+
+            <div class="mb-4 w-4/5 px-5">
+                <textarea  placeholder="description" formControlName="description" class="w-full placeholder: p-1"></textarea>
+            </div>
+
+            <div class="mb-4 w-4/5 px-5">
+                <input type="date" placeholder="Date Début" formControlName="startDate" class="w-full placeholder: p-1">
+            </div>
+
+            <div class="mb-4 w-4/5 px-5">
+                <input type="date" placeholder="Date Fin" formControlName="endDate" class="w-full placeholder: p-1">
+            </div>
+
+            <div class="mb-4 w-4/5 px-5">
+                <input type="number" placeholder="Nombre de place maximum" formControlName="maxGuest" class="w-full placeholder: p-1">
+            </div>
+            <div class="mb-2">
+                <button type="submit" class="btn-log text-md font-bold mb-4">Modifer</button>
+            </div>
+    </form>
+</div>

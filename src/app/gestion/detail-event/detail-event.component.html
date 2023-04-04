@@ -1,0 +1,14 @@
+<div class="flex justify-center items-center h-screen">
+    <div class="bg-ciel p-4">
+        <a routerLink="/gestion/accueil"><button class=" px-2 bg-yellow hover:bg-blue hover:text-yellow text-2xl mb-3">←</button></a>
+        
+        <div *ngIf="activity">
+            <h3 class="text-lg font-bold underline">{{activity.name}}</h3>
+            <p> <span class="font-bold text-md" >Description</span> : {{activity.description}}</p>
+            <p> <span class="font-bold text-md" >Max de place</span> : {{activity.maxGuest}}</p>
+            <p> <span class="font-bold text-md" >Date de début</span> : {{activity.startDate | date}}</p>
+            <p> <span class="font-bold text-md" >Date de fin</span> : {{activity.endDate  | date}}</p>
+        </div>
+    </div>
+</div>
+    

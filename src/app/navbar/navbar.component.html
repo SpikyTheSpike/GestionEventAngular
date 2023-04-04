@@ -1,0 +1,21 @@
+<nav class="flex items-center m-3">
+
+  <div *ngIf="connectedUser" class="flex justify-start items-center w-full ml-4">
+    <p class="text-blue font-bold text-xl">Bonjour {{connectedUser.firstname}}</p>
+  </div>
+  <ul class="flex w-full justify-end items-center text-blue font-bold">
+    <li >
+      <a routerLink="/gestion/accueil" class="text-yellow text-xl ml-4 hover:text-brun">Accueil</a>
+    </li>
+    <li *ngIf="connectedUser">
+      <a routerLink="/gestion/myevents" class="text-yellow text-xl ml-4 hover:text-brun">Mes Events</a>
+    </li>
+    <li  *ngIf="connectedUser">
+      <a routerLink="/gestion/myreservations" class="text-yellow text-xl ml-4 hover:text-brun">Mes Réservations</a>
+    </li>
+  </ul>
+
+    <a *ngIf="!connectedUser" routerLink="/gestion/login"><button class="btn mx-5 text-xl font-lg">Connexion</button></a>
+    <button *ngIf="connectedUser" (click)="disconnect()" class="btn text-xl font-lg ml-4">Deconnexion</button>
+
+</nav>

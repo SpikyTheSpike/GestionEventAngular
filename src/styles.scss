@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .btn{
+        @apply p-2 bg-yellow
+    }
+    .btn-log{
+        @apply p-2 border-solid border-2 border-blue hover:bg-blue hover:text-yellow
+    }
+    .btn-event{
+        @apply p-2 bg-blue  text-yellow
+    }
+    .form{
+        @apply w-1/4 bg-ciel flex justify-center items-center flex-col
+    }
+}
+
+body{
+    background-image: url(/assets/images/bg.svg);
+}

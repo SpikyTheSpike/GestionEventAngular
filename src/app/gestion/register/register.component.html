@@ -1,0 +1,33 @@
+<div class="login flex justify-center items-center h-screen ">
+  <form [formGroup]="registerForm"  (ngSubmit)="register()" class="form">
+    <h3 class="mb-4 font-bold text-2xl mt-4">Créer un compte</h3>  
+    <div class="mb-4 w-4/5 px-5">
+          <input type="text" placeholder="Pseudo" formControlName="pseudo" class="w-full placeholder: p-1">
+          <span *ngIf="registerForm.get('pseudo')?.touched && registerForm.get('pseudo')?.errors?.['required']">Champs requis</span>
+      </div>
+      <div class="mb-4 w-4/5 px-5">
+          <input type="email" placeholder="Email" formControlName="email" class="w-full placeholder: p-1">
+          <span *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.errors?.['required']">Champs requis</span>
+      </div>
+      <div class="mb-4 w-4/5 px-5">
+          <input type="text" placeholder="Nom" formControlName="lastname" class="w-full placeholder: p-1">
+          <span *ngIf="registerForm.get('lastname')?.touched && registerForm.get('lastname')?.errors?.['required']">Champs requis</span>
+      </div>
+      <div class="mb-4 w-4/5 px-5">
+          <input type="text" placeholder="Prénom" formControlName="firstname" class="w-full placeholder: p-1">
+          <span *ngIf="registerForm.get('firstname')?.touched && registerForm.get('firstname')?.errors?.['required']">Champs requis</span>
+      </div>
+      <div class="mb-4 w-4/5 px-5">
+          <input type="password" placeholder="Mot de Passe" formControlName="password" class="w-full placeholder: p-1">
+          <span *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.errors?.['required']">Champs requis</span>
+          <span *ngIf="registerForm.get('password')?.dirty && registerForm.get('password')?.errors?.['pattern']">Regex Warning</span>
+      </div>
+      <div class="mb-2">
+        <button type="submit" class="btn-log text-md font-bold mb-4">Créer</button>
+    </div>
+      <div *ngIf="isCreate ==='true'">
+        <p class="text-brun">Compte à bien été créer</p>
+      </div>
+      
+  </form>
+</div>

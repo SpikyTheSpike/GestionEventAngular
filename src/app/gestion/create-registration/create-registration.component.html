@@ -1,0 +1,11 @@
+<div class="login flex justify-center items-center h-screen flex-col ">
+    <form [formGroup]="registerForm"  (ngSubmit)="register()" class="form">
+        <h3 class="w-full flex justify-center text-xl font-bold m-4">S'inscrire à event</h3>
+        <div class="mb-4 w-4/5 px-5">
+            <input type="number" placeholder="nombre de place" formControlName="nbGuest" class="w-full placeholder: p-1">
+        </div>
+        <div class="mb-2">
+            <button type="submit" class="btn-log text-md font-bold mb-4">S'inscrire</button>
+        </div>
+    </form>
+</div>
